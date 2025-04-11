@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'heart_api.urls'
@@ -127,3 +128,11 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+import dj_database_url
+import os
+
+DATABASES['default'] = dj_database_url.config(default='sqlite:///db.sqlite3')
+
+ALLOWED_HOSTS = ['*']  # Or specify your Render domain later
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
