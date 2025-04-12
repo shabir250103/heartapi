@@ -10,3 +10,4 @@ llvmlite
 gunicorn
 whitenoise
 python-magic
+dj_database_url
