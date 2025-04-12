@@ -1,4 +1,6 @@
 import os
+os.environ['NUMBA_DISABLE_JIT'] = '1'  # ✅ Fix for deployment platforms like Render
+
 import numpy as np
 import librosa
 from rest_framework.views import APIView
