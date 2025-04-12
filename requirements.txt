@@ -6,3 +6,4 @@ librosa
 joblib
 pydub
 soundfile
+dj_database_url
