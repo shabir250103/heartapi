@@ -11,3 +11,4 @@ gunicorn
 whitenoise
 python-magic
 dj-database-url
+numpy._core
