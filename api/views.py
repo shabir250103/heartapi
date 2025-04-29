@@ -1,5 +1,5 @@
 import os
-os.environ['NUMBA_DISABLE_JIT'] = '1'  # ✅ Fix for deployment platforms like Render
+os.environ['NUMBA_DISABLE_JIT'] = '1'  
 
 import numpy as np
 import librosa
@@ -10,7 +10,6 @@ from rest_framework import status
 import joblib
 import tempfile
 
-# Load model & label encoder
 MODEL = joblib.load("heart_model_rf.pkl")
 ENCODER = joblib.load("label_encoder.pkl")
 
